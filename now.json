@@ -1,0 +1,56 @@
+{
+    "version" : 2,
+    "builds": [{"src" : "server.js", "use" : "@now/node-server"}],
+    "routes": [
+        {
+          "src": "/users/authenticate",
+          "dest": "/server.js",
+          "methods": ["POST"]
+        },
+        {
+          "src": "/users/register",
+          "dest": "/server.js",
+          "methods": ["POST"]
+        },
+        {
+          "src": "/users",
+          "dest": "/server.js",
+          "methods": ["GET"]
+        },
+        {
+          "src": "/users/:id",
+          "dest": "/server.js",
+          "methods": ["POST","DELETE","PUT"]
+        },
+        {
+          "src": "/customers",
+          "dest": "/server.js",
+          "methods": ["GET"]
+        },
+        {
+          "src": "/customers/register",
+          "dest": "/server.js",
+          "methods": ["POST"]
+        },
+        {
+          "src": "/customers/:id",
+          "dest": "/server.js",
+          "methods": ["GET"]
+        },
+        {
+            "src": "/bookings",
+            "dest": "/server.js",
+            "methods": ["GET"]
+          },
+          {
+            "src": "/users",
+            "dest": "/server.js",
+            "methods": ["GET"]
+          },
+          {
+            "src": "/cars",
+            "dest": "/server.js",
+            "methods": ["GET"]
+          }
+      ]
+}

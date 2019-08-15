@@ -1,0 +1,4 @@
+﻿{
+    "connectionString": "mongodb+srv://Adminuser:adminuser@cluster0-zm3sm.gcp.mongodb.net/mmf-tours?retryWrites=true&w=majority",
+    "secret": "this is Gods Work"
+}
