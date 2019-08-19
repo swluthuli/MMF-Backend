@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 
 
 // api routes
-app.use('/users', cors(), require('./users/users.controller'));
+app.use('/users', require('./users/users.controller'));
 app.use('/customers', require('./customers/customers.controller'));
 app.use('/cars', require('./cars/cars.controller'));
 app.use('/bookings', require('./bookings/bookings.controller'));
