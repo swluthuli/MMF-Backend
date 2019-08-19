@@ -25,7 +25,7 @@ app.use((req, res, next) => {
     next();
   });
   app.get('/favicon.ico', (req, res) => res.status(204));
-  app.get('/', function(req, res, next){
+  app.use('/', function(req, res, next){
     res.send("Middle");
     next();
  });
