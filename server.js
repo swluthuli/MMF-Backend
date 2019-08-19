@@ -24,7 +24,8 @@ app.use((req, res, next) => {
     }
     next();
   });
-
+  app.get('/favicon.ico', (req, res) => res.status(204));
+  app.get('/', (req, res) => res.status(204));
 
 // api routes
 app.use('/users', require('./users/users.controller'));
