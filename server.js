@@ -23,15 +23,11 @@ app.use((req, res, next) => {
         return res.status(200).json({})
     }
     next();
-  });
-  app.get('/favicon.ico', (req, res) => res.status(204));
-  app.use('/', function(req, res, next){
-    res.send("Middle");
-    next();
- });
+});
+app.get('/favicon.ico', (req, res) => res.status(204));
 
 // api routes
-app.use('/users', require('./users/users.controller'));
+app.use('/', require('./users/users.controller'));
 app.use('/customers', require('./customers/customers.controller'));
 app.use('/cars', require('./cars/cars.controller'));
 app.use('/bookings', require('./bookings/bookings.controller'));
